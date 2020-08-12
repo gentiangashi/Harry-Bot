@@ -1,6 +1,6 @@
 const discord = require('discord.js');
 var client = new discord.Client();
-const token = "NzQzMTIxNTc4Mzg4MjI2MTY5.XzQD5g.3lRqT22TreWfFN_mBYBwQNuLmZw";
+const token = "your-token-goes-here";
 // command used to call bot in server
 const prefix = "h!";
 // discord api reads discord message
