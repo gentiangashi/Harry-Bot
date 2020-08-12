@@ -41,6 +41,7 @@ Launch bot with:
 * **Jeff Pete** - [jeffpete](https://github.com/jeffpete)
 
 ## License
+tldr:
 > Do whatever you want with it, but if anything goes wrong, don't blame me.
 
 MIT © [Gentian Gashi](https://github.com/GentianGashi)
