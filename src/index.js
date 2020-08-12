@@ -6,9 +6,10 @@ const prefix = "h!";
 // discord api reads discord message
 client.on("message", (message) => {
   if(message.author.bot) return;
-  // Chooses image at random
   if (message.content.startsWith (prefix + "meme")) {
+    // Change 6 to however many images there are within the folder
     let imageNumber = Math.floor(Math.random()* 6) +1
+    // displays image at random
         message.channel.send ( {files: ["../memes/" + imageNumber + ".png"]} )
       }
 });
