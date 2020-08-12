@@ -33,7 +33,7 @@ Launch with:
 
 ## Author
 * **Gentian Gashi** - [GentianGashi](https://github.com/GentianGashi)
-* **Jeff Pete** - [Jeff Pete](https://github.com/jeffpete)
+* **Jeff Pete** - [jeffpete](https://github.com/jeffpete)
 
 ## License
 > Do whatever you want with it, but don't blame me for anything that goes wrong.
