@@ -11,7 +11,7 @@
 <!--te-->
 
 ## Introduction
-Locally hosted Discord Bot using Node Js, uploads a random meme in the discord server with the command **!meme**
+Locally hosted Discord Bot using Node Js, uploads a random meme in the discord server with the command **!h meme**
 
 ## Installation
 You'll need to install:
