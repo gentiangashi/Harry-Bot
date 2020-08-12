@@ -11,7 +11,7 @@
 <!--te-->
 
 ## Introduction
-Discord Bot occasionaly updates you with memes.
+Discord Bot uploads a random meme in the discord server with the command !meme
 
 ## Installation
 You'll need to install:
