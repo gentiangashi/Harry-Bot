@@ -19,6 +19,8 @@ You'll need to install:
 * [Visual Studio Code](https://code.visualstudio.com/download) (OPTIONAL)
 
     $ npm init
+    
+    
     $ npm install discord.js-commando --save
 
 ## Usage
