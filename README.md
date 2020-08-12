@@ -39,6 +39,7 @@ Launch bot with:
 ## Author
 * **Gentian Gashi** - [GentianGashi](https://github.com/GentianGashi)
 * **Jeff Pete** - [jeffpete](https://github.com/jeffpete)
+* **Discord API** - [Discord](https://github.com/discord)
 
 ## License
 tldr:
