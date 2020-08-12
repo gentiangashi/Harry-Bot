@@ -16,7 +16,7 @@ Discord Bot occasionaly updates you with memes.
 ## Installation
 You'll need to install:
 * [Node Js](https://nodejs.org/en/download/)
-* [Create Your Own Discord Bot & Token](https://discord.com/developers/applications)
+* [Create Your Own Discord Bot & Token Here](https://discord.com/developers/applications)
 * [Visual Studio Code](https://code.visualstudio.com/download) (Optional)
 
 **After installing Node Js, in the src directory, open up command line and install the following:**
@@ -34,8 +34,6 @@ Launch bot with:
 
     $ node .
  
- You may recieve an error if the discord token has been changed 
-
 ## Author
 * **Gentian Gashi** - [GentianGashi](https://github.com/GentianGashi)
 * **Jeff Pete** - [jeffpete](https://github.com/jeffpete)
