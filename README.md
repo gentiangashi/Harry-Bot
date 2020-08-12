@@ -29,7 +29,7 @@ Install discord commando:
     $ npm install discord.js-commando --save
 
 ## Usage
-Launch with:
+Launch bot with:
 
     $ node .
 
