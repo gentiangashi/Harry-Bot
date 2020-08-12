@@ -18,9 +18,12 @@ You'll need to install:
 * [Node Js](https://nodejs.org/en/download/)
 * [Visual Studio Code](https://code.visualstudio.com/download) (OPTIONAL)
 
+Install node js packages:
+
     $ npm init
     
-    
+Install discord commando:
+
     $ npm install discord.js-commando --save
 
 ## Usage
