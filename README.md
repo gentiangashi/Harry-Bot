@@ -27,7 +27,7 @@ Install node js packages:
     
 Install discord commando:
 
-    $ npm install discord.js-commando --save
+    $ npm install discord.js --save
 
 ## Usage
 Launch bot with:
