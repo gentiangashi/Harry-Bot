@@ -1,5 +1,5 @@
 # Harry Bot
-[![GitHub license](https://img.shields.io/github/license/GentianGashi/Harry-Bot)](https://github.com/GentianGashi/Harry-Bot/blob/master/LICENSE)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![GitHub license](https://img.shields.io/github/license/GentianGashi/Harry-Bot)](https://github.com/GentianGashi/Harry-Bot/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Table of Contents
 <!--ts-->
