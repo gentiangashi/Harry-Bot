@@ -19,6 +19,7 @@ You'll need to install:
 * [Visual Studio Code](https://code.visualstudio.com/download) (OPTIONAL)
 
 **In Command Line:**
+
 Install node js packages:
 
     $ npm init
