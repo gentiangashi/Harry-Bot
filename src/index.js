@@ -1,5 +1,6 @@
 const commando = require('discord.js-commando');
 const bot = new commando.Client();
+const prefix = "!h";
 
 bot.registry.registerGroup('random', 'Random');
 bot.registry.registerDefaults();
@@ -11,6 +12,11 @@ bot.on('message', (message) => {
        message.channel.send('pong!');
     }
 });
+// Chooses image at random
+if (message.content.startsWith (prefix + "random image")) {
+ let imageNumber = Math.floor(Math.random()* 6) +1
+     message.channel.send ( {files: ["./memes/" + imageNumber + ".png"]} )
+   }
 
 bot.on('message', (message) => {
   if(message.content == '!h memes') {
