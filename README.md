@@ -17,6 +17,7 @@ Locally hosted Discord Bot using Node.js, uploads a random meme in the discord s
 
 ## Installation
 **Node.js 12.0.0 or newer is required.**
+
 Ignore any warnings about unmet peer dependencies, as they're all optional.
 
 You need to create your own [Discord Token](https://discord.com/developers/applications) to be able to run this bot. You can find the installation documentation for [Discord.js here](https://discord.js.org/#/docs/main/stable/general/welcome).
