@@ -23,7 +23,7 @@ Install node js packages:
 
     $ npm init
     
-Install discord commando:
+Install discord.js:
 
     $ npm install discord.js --save
 
