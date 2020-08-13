@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 var client = new discord.Client();
 require('dotenv-flow').config()
-numberOfImages = 13; // Change number to however many images there are within the memes folder
+var numberOfImages = 13; // Change number to however many images there are within the memes folder
 
 // Config object
 const config = {
