@@ -11,21 +11,25 @@
 <!--te-->
 
 ## Introduction
-Locally hosted Discord Bot using Node Js, uploads a random meme in the discord server with the command **!h meme**
+Locally hosted Discord Bot using Node.js, uploads a random meme in the discord server with the command **!h meme**
 
 **More Features Coming Soon!!!**
 
 ## Installation
-You need to create your own [Discord Token](https://discord.com/developers/applications) to be able to run this bot. You can find the installation documentation for [Discord.Js here](https://discord.js.org/#/docs/main/stable/general/welcome).
-Make sure you have [Node.Js installed](https://nodejs.org/en/download/), and run:
+You need to create your own [Discord Token](https://discord.com/developers/applications) to be able to run this bot. You can find the installation documentation for [Discord.js here](https://discord.js.org/#/docs/main/stable/general/welcome).
+Make sure you have [Node.js installed](https://nodejs.org/en/download/), and run:
 
-Install node js packages:
+Install node.js packages:
 
     $ npm init
     
 Install discord.js:
 
     $ npm install discord.js --save
+    
+Install dotenv-flow:
+
+    $ npm install dotenv-flow --save
 
 ## Usage
 Launch bot with:
