@@ -16,6 +16,9 @@ Locally hosted Discord Bot using Node Js, uploads a random meme in the discord s
 **More Features Coming Soon!!!**
 
 ## Installation
+You can find the installation documentation for [Discord.Js Documentation](https://discord.js.org/#/docs/main/stable/general/welcome).
+Make sure you have [Node.Js installed](https://nodejs.org/en/download/), and run:
+
 You'll need to install:
 * [Node Js](https://nodejs.org/en/download/)
 * [Create Your Own Discord Bot & Token Here](https://discord.com/developers/applications)
