@@ -11,10 +11,10 @@
 <!--te-->
 
 ## Introduction
+Locally hosted Discord Bot using Node.js, uploads a random meme in the discord server with the command **!h meme**
+
 discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to easily interact with the
 [Discord API](https://discord.com/developers/docs/intro).
-
-Locally hosted Discord Bot using Node.js, uploads a random meme in the discord server with the command **!h meme**
 
 ## Installation
 
