@@ -20,16 +20,16 @@ client.on("message", (message) => {
   if(message.author.bot) return;
   
   // Displays latency in chat
-  if (message.content.startsWith(config.prefix + "ping")) {
-    var ping = Date.now() - message.createdTimestamp + " ms";
-    message.channel.sendMessage("Your ping is `" + `${ping}` + " ms`");
-      }
+  if(message.content.startsWith(config.prefix + "ping")) {
+        message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
+    }
+
   
-   // displays image at random
+  // displays image at random
   if (message.content.startsWith (config.prefix + "meme")) {
     let imageNumber = Math.floor(Math.random()* numberOfImages) +1
         message.channel.send ( {files: ["../memes/" + imageNumber + ".png"]} )
-      }
+    }
 });
-// server connects to discord api using token
+// server connects to Discord API using token
 client.login(config.token);
