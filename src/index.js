@@ -44,6 +44,7 @@ client.on("message", (message) => {
 		} 
 		catch (e) {
 		console.error(e);
+		message.channel.send ("ERROR: You need to use that command in a server")
 		}
 	}
 
