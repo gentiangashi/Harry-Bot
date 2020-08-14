@@ -15,6 +15,7 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 [Discord API](https://discord.com/developers/docs/intro). The bot is hosted 24/7 using the [Heroku Cloud](https://www.heroku.com/).
 
 **Command Overview:**
+
 *Important:*
 * **!h help** - Displays commands
 
