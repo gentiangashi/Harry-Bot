@@ -12,6 +12,7 @@ const config = {
 
 // Displays in command line when successfully connected
 client.on('ready', () => {
+  client.user.setStatus("online");
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
@@ -24,7 +25,10 @@ client.on("message", (message) => {
         message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
     }
 
-  
+  if(message.content.startsWith(config.prefix + "server")) {
+		message.channel.send("hi");
+	}	
+
   // displays image at random
   if (message.content.startsWith (config.prefix + "meme")) {
     let imageNumber = Math.floor(Math.random()* numberOfImages) +1
