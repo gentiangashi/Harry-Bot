@@ -29,7 +29,7 @@ client.on("message", (message) => {
 	// Displays random image
 	if (message.content.startsWith (config.prefix + "meme")) {
 	let imageNumber = Math.floor(Math.random()* numberOfImages) +1
-		message.channel.send ( {files: ["../memes/" + imageNumber + ".png"]} )
+		message.channel.send ( {files: ["memes/" + imageNumber + ".png"]} )
 	}
 
 	// Displays latency in chat
