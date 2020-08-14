@@ -23,7 +23,7 @@ client.on("message", (message) => {
 
 	// Displays commands
 	if(message.content.startsWith(config.prefix + "help")) {
-		message.channel.send("*Important:*\n**!h help** - Displays list of commands\n\n*Fun:*\n**!h meme** - Uploads random meme\n**!h avatar** - Displays user's avatar URL\n\n*Statistics:*\n**!h ping** - Displays latency\n**!h server** - Displays server name and total server members");
+		message.channel.send("\n*Important:*\n**!h help** - Displays list of commands\n\n*Fun:*\n**!h meme** - Uploads random meme\n**!h avatar** - Displays user's avatar URL\n\n*Statistics:*\n**!h ping** - Displays latency\n**!h server** - Displays server name and total server members");
 	}
 
 	// Displays random image
