@@ -27,7 +27,7 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 **Node.js 12.0.0 or newer is required.**  
 Ignore any warnings about unmet peer dependencies, as they're all optional.
 
-You need to create your own [Discord Token](https://discord.com/developers/applications) to be able to run this bot. You can find the installation documentation for [Discord.js here](https://discord.js.org/#/docs/main/stable/general/welcome).
+You need to create your own [Discord Token](https://discordapp.com/developers/applications/me) to be able to run this bot. You can find the installation documentation for [Discord.js here](https://discord.js.org/#/docs/main/stable/general/welcome).
 Make sure you have [Node.js installed](https://nodejs.org/en/download/), and run:
 
 Install node.js packages:
