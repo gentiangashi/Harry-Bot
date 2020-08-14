@@ -11,8 +11,10 @@
 <!--te-->
 
 ## Introduction
-discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to easily interact with the
-[Discord API](https://discord.com/developers/docs/intro) and locally host your discord bot. You can interact with the bot using the commands below:
+Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to easily interact with the
+[Discord API](https://discord.com/developers/docs/intro) and locally host your discord bot.
+
+You can interact with the bot using the commands below:
 * **!h help** - Displays commands
 * **!h meme** - Uploads a random meme
 * **!h ping** - Displays bot latency
