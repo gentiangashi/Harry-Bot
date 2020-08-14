@@ -13,7 +13,8 @@
 ## Introduction
 Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to easily interact with the
 [Discord API](https://discord.com/developers/docs/intro) and locally host your discord bot.
-  **Command Overview**
+
+**Command Overview:**
 * **!h help** - Displays commands
 * **!h meme** - Uploads a random meme
 * **!h ping** - Displays bot latency
