@@ -39,8 +39,13 @@ client.on("message", (message) => {
 
 	// Displays server name + total members
 	if(message.content.startsWith(config.prefix + "server")) {
-		message.channel.send("Server name: N/A\nTotal Members: N/A");
+		message.channel.send("**Server Name:** " + message.guild.name + "\n**Total Members:** " + message.guild.memberCount);
+	}
+
+	// Send the user's avatar URL
+	if(message.content.startsWith(config.prefix + "avatar")) {
+		message.channel.send(message.author.displayAvatarURL());
 	}
 });
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login(config.token);	
+client.login(config.token);
