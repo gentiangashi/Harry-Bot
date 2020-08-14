@@ -18,7 +18,6 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 * **!h help** - Displays commands
 * **!h meme** - Uploads a random meme
 * **!h ping** - Displays bot latency
-* **!h server** - Displays server name and it's total members
 
 [Click Here to Invite to Server](https://discord.com/api/oauth2/authorize?client_id=743121578388226169&permissions=271969360&scope=bot)
 
