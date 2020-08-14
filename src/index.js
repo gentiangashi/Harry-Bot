@@ -19,9 +19,15 @@ client.on('ready', () => {
 client.on("message", (message) => {
   if(message.author.bot) return;
   
+  // Displays latency in chat
+  if (message.content.startsWith(config.prefix + "ping")) {
+    var ping = Date.now() - message.createdTimestamp + " ms";
+    message.channel.sendMessage("Your ping is `" + `${ping}` + " ms`");
+      }
+  
+   // displays image at random
   if (message.content.startsWith (config.prefix + "meme")) {
     let imageNumber = Math.floor(Math.random()* numberOfImages) +1
-    // displays image at random
         message.channel.send ( {files: ["../memes/" + imageNumber + ".png"]} )
       }
 });
