@@ -40,9 +40,9 @@ client.on("message", (message) => {
 	// Displays server name + total members
 	if(message.content.startsWith(config.prefix + "server")) {
 		try {
-        message.channel.send("**Server Name:** " + message.guild.name + "\n**Total Members:** " + message.guild.memberCount);
-    	} catch (e) {
-        console.error(e);
+		message.channel.send("**Server Name:** " + message.guild.name + "\n**Total Members:** " + message.guild.memberCount);
+		} catch (e) {
+		console.error(e);
 	}
 
 	// Send the user's avatar URL
