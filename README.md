@@ -33,8 +33,6 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 	* **!h ping** - Displays bot latency
 	* **!h server** - Displays server name + total members
 
-[Click Here to Invite to Server](https://discord.com/api/oauth2/authorize?client_id=743121578388226169&permissions=271969360&scope=bot)
-
 ## Installation
 
 **Node.js 12.0.0 or newer is required.**  
