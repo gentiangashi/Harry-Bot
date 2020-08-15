@@ -6,7 +6,6 @@
 [![Discord](https://img.shields.io/badge/Invite-Bot-9cf)](https://discord.com/api/oauth2/authorize?client_id=743121578388226169&permissions=271969360&scope=bot)
 
 Harry Bot is a general-purpose discord bot coded in JavaScript with [Node.js](https://nodejs.org) using modules such as [Discord.js](https://discord.js.org/) to provide a feature-rich user experience.
-
 ## Table of Contents
 <!--ts-->
 - [Introduction](#introduction)  
