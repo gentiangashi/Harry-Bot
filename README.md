@@ -43,22 +43,13 @@ Ignore any warnings about unmet peer dependencies, as they're all optional.
 You need to create your own [Discord Token](https://discordapp.com/developers/applications/me) to be able to run this bot. You can find the installation documentation for [Discord.js here](https://discord.js.org/#/docs/main/stable/general/welcome).
 Make sure you have [Node.js installed](https://nodejs.org/en/download/), and run:
 
-Install node.js packages:
-
-    $ npm init
-    
-Install discord.js:
-
-    $ npm install discord.js --save
-    
-Install dotenv-flow:
-
-    $ npm install dotenv-flow --save
+1. Run `$ npm init` to install node.js packages.
+2. Run `$ npm install discord.js --save` to install discord.js.
+3. Run `$ npm install dotenv-flow --save` to install dotenv-flow.
 
 ## Usage
-Launch bot with:
-
-    $ node .
+1. Run `$ node .` to launch the bot.
+2. Run `CTRL + C` to stop the bot.
  
 ## Author
 * **Gentian Gashi** - [GentianGashi](https://github.com/GentianGashi)
