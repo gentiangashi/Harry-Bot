@@ -48,9 +48,14 @@ client.on("message", (message) => {
 		}
 	}
 
-	// Send the user's avatar URL
-	if(message.content.startsWith(config.prefix + "avatar")) {
-		message.channel.send(message.author.displayAvatarURL());
+	// Send the @user's avatar
+	if (message.content.startsWith(config.prefix + "avatar")) {
+		const user = message.mentions.users.first() || message.author;
+		const avatarEmbed = new discord.MessageEmbed()
+			.setColor('0x333333')
+			.setAuthor(user.username)
+			.setImage(user.displayAvatarURL());
+		message.channel.send(avatarEmbed);
 	}
 });
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
