@@ -1,13 +1,20 @@
+<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Harry Bot" src="https://i.imgur.com/3j3hDUl.png">  
+
 # Harry Bot
-[![GitHub license](https://img.shields.io/github/license/GentianGashi/Harry-Bot)](https://github.com/GentianGashi/Harry-Bot/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![GitHub license](https://img.shields.io/github/license/GentianGashi/Harry-Bot)](https://github.com/GentianGashi/Harry-Bot/blob/master/LICENSE) 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+Harry Bot is a general-purpose discord bot coded in JavaScript with
+[Node.js](https://nodejs.org) using modules such as
+[Discord.js](https://discord.js.org/) to provide a feature experience.
 
 ## Table of Contents
 <!--ts-->
-   * [Introduction](#introduction)  
-   * [Installation](#installation)
-   * [Usage](#usage)
-   * [Authors](#author)  
-   * [License](#license)  
+- [Introduction](#introduction)  
+- [Installation](#installation)
+- [Usage](#usage)
+- [Authors](#author)  
+- [License](#license)  
 <!--te-->
 
 ## Introduction
