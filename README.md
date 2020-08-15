@@ -49,7 +49,7 @@ Make sure you have [Node.js installed](https://nodejs.org/en/download/), and run
 
 ## Usage
 1. Run `$ node .` to launch the bot.
-2. Run `CTRL + C` to stop the bot.
+2. Run `$ CTRL + C` to stop the bot.
  
 ## Author
 * **Gentian Gashi** - [GentianGashi](https://github.com/GentianGashi)
