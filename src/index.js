@@ -22,8 +22,22 @@ client.on("message", (message) => {
 	if(message.author.bot) return;
 
 	// Displays commands
-	if(message.content.startsWith(config.prefix + "help")) {
-		message.channel.send("\n*Important:*\n**!h help** - Displays list of commands\n\n*Fun:*\n**!h meme** - Uploads random meme\n**!h avatar** - Displays user's avatar URL\n\n*Statistics:*\n**!h ping** - Displays latency\n**!h server** - Displays server name and total server members");
+ 	if (message.content.startsWith(config.prefix + "help")) {
+		const helpEmbed = new discord.MessageEmbed()
+		.setColor('#0099ff')
+		.setTitle('Command Guide:')
+		.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+		.addFields(
+			{ name: '!h help', value: 'Displays list of commands' },
+			{ name: '!h meme', value: 'Uploads random meme' },
+			{ name: '!h avatar', value: 'Displays @users avatar' },
+			{ name: '!h ping', value: 'Displays bot latency' },
+			{ name: '!h server', value: 'Displays server name + total members' }
+		)
+		.setTimestamp()
+		.setFooter('Made by Unbound#5588', 'https://i.imgur.com/wSTFkRM.png');
+
+		message.channel.send(helpEmbed);
 	}
 
 	// Displays random image
@@ -52,7 +66,7 @@ client.on("message", (message) => {
 	if (message.content.startsWith(config.prefix + "avatar")) {
 		const user = message.mentions.users.first() || message.author;
 		const avatarEmbed = new discord.MessageEmbed()
-			.setColor('0x333333')
+			.setColor('#0099ff')
 			.setAuthor(user.username)
 			.setImage(user.displayAvatarURL());
 		message.channel.send(avatarEmbed);
