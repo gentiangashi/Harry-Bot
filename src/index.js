@@ -13,7 +13,7 @@ const config = {
 // Displays in command line when successfully connected
 client.on('ready', () => {
 	client.user.setStatus("online")
-	client.user.setActivity("info: !h help");
+	client.user.setActivity("!h help");
 	console.log(`Logged in as ${client.user.tag}!`);
 });
 
