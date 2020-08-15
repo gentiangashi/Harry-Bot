@@ -21,7 +21,7 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 
 *Fun:*
 * **!h meme** - Uploads a random meme
-* **!h avatar** - Displays user's avatar URL
+* **!h avatar** - Displays @users avatar
 
 *Statistics:*
 * **!h ping** - Displays bot latency
