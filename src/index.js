@@ -68,7 +68,7 @@ client.on("message", (message) => {
 		const avatarEmbed = new discord.MessageEmbed()
 			.setColor('#0099ff')
 			.setAuthor(user.username)
-			.setImage(user.displayAvatarURL());
+			.setImage(user.displayAvatarURL({ size: 2048, dynamic: true }));
 		message.channel.send(avatarEmbed);
 	}
 });
