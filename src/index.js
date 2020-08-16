@@ -1,7 +1,7 @@
 const discord = require('discord.js'); // Import the discord.js module
 var client = new discord.Client(); // Create an instance of a Discord client
 require('dotenv-flow').config() // Import the dotenv-flow module
-var numberOfImages = 14; // Change number to however many images there are within the memes folder
+var numberOfImages = 21; // Change number to however many images there are within the memes folder
 
 // Config object
 const config = {
