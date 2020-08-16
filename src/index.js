@@ -17,6 +17,21 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
 
+// Uploads random meme from /r/dankmemes
+client.on("message", async (message) => {
+        if (message.content.startsWith(config.prefix + "badmeme")) {
+        const api = require('imageapi.js');
+ 
+        let subreddit = "dankmemes"
+        let redditImage = await api(subreddit)
+        let dankEmbed = new discord.MessageEmbed()
+        .setTitle(`Random meme from r/${subreddit}`)
+        .setURL(`https://reddit.com/r/${subreddit}`)
+        .setImage(redditImage)
+        .setColor("#0099ff")
+        message.channel.send(dankEmbed)
+}}); 
+
 // Discord API reads discord message
 client.on("message", (message) => {
 	if(message.author.bot) return;
@@ -29,7 +44,8 @@ client.on("message", (message) => {
 		.setThumbnail('https://i.imgur.com/PrTsFaf.png')
 		.addFields(
 			{ name: '!h help', value: 'Displays list of commands' },
-			{ name: '!h meme', value: 'Uploads random meme' },
+			{ name: '!h goodmeme', value: 'Uploads random meme' },
+			{ name: '!h badmeme', value: 'Uploads random meme from /r/dankmemes' },
 			{ name: '!h avatar', value: 'Displays @users avatar' },
 			{ name: '!h ping', value: 'Displays bot latency' },
 			{ name: '!h server', value: 'Displays server name + total members' }
@@ -41,7 +57,7 @@ client.on("message", (message) => {
 	}
 
 	// Displays random image
-	if (message.content.startsWith (config.prefix + "meme")) {
+	if (message.content.startsWith (config.prefix + "goodmeme")) {
 	let imageNumber = Math.floor(Math.random()* numberOfImages) +1
 		message.channel.send ( {files: ["memes/" + imageNumber + ".png"]} )
 	}
