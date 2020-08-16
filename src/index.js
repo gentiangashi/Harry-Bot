@@ -25,8 +25,8 @@ client.on("message", (message) => {
  	if (message.content.startsWith(config.prefix + "help")) {
 		const helpEmbed = new discord.MessageEmbed()
 		.setColor('#0099ff')
-		.setTitle('Command Guide:')
-		.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+		.setTitle("Harry's Command Guide:")
+		.setThumbnail('https://i.imgur.com/PrTsFaf.png')
 		.addFields(
 			{ name: '!h help', value: 'Displays list of commands' },
 			{ name: '!h meme', value: 'Uploads random meme' },
