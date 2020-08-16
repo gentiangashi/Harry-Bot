@@ -21,14 +21,15 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 
 **Command Overview:**
 
-- *Important:*
+- *Help:*
 	* **!h help** - Displays commands
 
 - *Fun:*
-	* **!h meme** - Uploads a random meme
+	* **!h goodmeme** - Uploads a random meme
+	* **!h badmeme** - Uploads random meme from /r/dankmemes
 	* **!h avatar** - Displays @users avatar
 
-- *Statistics:*
+- *Info:*
 	* **!h ping** - Displays bot latency
 	* **!h server** - Displays server name + total members
 
