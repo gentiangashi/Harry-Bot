@@ -1,92 +1,116 @@
-const discord = require('discord.js'); // Import the discord.js module
-var client = new discord.Client(); // Create an instance of a Discord client
-require('dotenv-flow').config() // Import the dotenv-flow module
-var numberOfImages = 21; // Change number to however many images there are within the memes folder
+/* Network-Installed Dependencies */
+const Discord = require(`discord.js`);
+const Math = require(`math.js`);
+const fs = require(`fs`);
+const dotenv = require(`dotenv`).config();
 
-// Config object
-const config = {
-	token: process.env.TOKEN,
-	owner: process.env.OWNER,
-	prefix: process.env.PREFIX
-};
+/* Client Config */
+const config = require(`./config/config`);
+const client = new Discord.Client({
+    // disableEveryone: true,
+    fetchAllMembers: true, 
+    sync: true
+});
+const cooldowns = new Discord.Collection();
 
-// Displays in command line when successfully connected
-client.on('ready', () => {
-	client.user.setStatus("online")
-	client.user.setActivity("!h help");
-	console.log(`Logged in as ${client.user.tag}!`);
+module.exports = {
+    config: config,
+    client: client
+}
+
+/* Client Events */
+client.on(`ready`, async () => {
+    console.log(`${client.user.username}#${client.user.discriminator} has started, with ${client.users.cache.size} users in ${client.guilds.cache.size} servers at ${config.hostname}.`);
+    refreshActivity();
 });
 
-// Uploads random meme from /r/dankmemes
-client.on("message", async (message) => {
-        if (message.content.startsWith(config.prefix + "badmeme")) {
-        const api = require('imageapi.js');
- 
-        let subreddit = "dankmemes"
-        let redditImage = await api(subreddit)
-        let dankEmbed = new discord.MessageEmbed()
-        .setTitle(`Random meme from r/${subreddit}`)
-        .setURL(`https://reddit.com/r/${subreddit}`)
-        .setImage(redditImage)
-        .setColor("#0099ff")
-        message.channel.send(dankEmbed)
-}}); 
+/* Client Events */
+client.events = new Discord.Collection();
+fs.readdir(`${__dirname}/events/`, (err, files) => {
+    if(err) console.error(err);
 
-// Discord API reads discord message
-client.on("message", (message) => {
-	if(message.author.bot) return;
+    let jsFiles = files.filter(f => f.split(`.`).pop() == `js`);
+    if(jsFiles.length <= 0) return console.log(`No events to load!`);
 
-	// Displays commands
- 	if (message.content.startsWith(config.prefix + "help")) {
-		const helpEmbed = new discord.MessageEmbed()
-		.setColor('#0099ff')
-		.setTitle("Harry's Command Guide:")
-		.setThumbnail('https://i.imgur.com/PrTsFaf.png')
-		.addFields(
-			{ name: '!h help', value: 'Displays list of commands' },
-			{ name: '!h goodmeme', value: 'Uploads random meme' },
-			{ name: '!h badmeme', value: 'Uploads random meme from /r/dankmemes' },
-			{ name: '!h avatar', value: 'Displays @users avatar' },
-			{ name: '!h ping', value: 'Displays bot latency' },
-			{ name: '!h server', value: 'Displays server name + total members' }
-		)
-		.setTimestamp()
-		.setFooter('Made by Unbound#5588', 'https://i.imgur.com/wSTFkRM.png');
-
-		message.channel.send(helpEmbed);
-	}
-
-	// Displays random image
-	if (message.content.startsWith (config.prefix + "goodmeme")) {
-	let imageNumber = Math.floor(Math.random()* numberOfImages) +1
-		message.channel.send ( {files: ["memes/" + imageNumber + ".png"]} )
-	}
-
-	// Displays latency in chat
-	if(message.content.startsWith(config.prefix + "ping")) {
-		message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
-	}
-
-	// Displays server name + total members
-	if(message.content.startsWith(config.prefix + "server")) {
-		try {
-		message.channel.send("**Server Name:** " + message.guild.name + "\n**Total Members:** " + message.guild.memberCount);
-		} 
-		catch (e) {
-		console.error(e);
-		message.channel.send ("**ERROR:** You need to use that command in a server.")
-		}
-	}
-
-	// Send the @user's avatar
-	if (message.content.startsWith(config.prefix + "avatar")) {
-		const user = message.mentions.users.first() || message.author;
-		const avatarEmbed = new discord.MessageEmbed()
-			.setColor('#0099ff')
-			.setAuthor(user.username)
-			.setImage(user.displayAvatarURL({ size: 2048, dynamic: true }));
-		message.channel.send(avatarEmbed);
-	}
+    /* Load Commands */
+    jsFiles.forEach(f => client.events.set(f.split(`.`)[0], require(`./events/${f}`)));
+    // console.log(`[${client.shard.id}]: Loaded ${jsFiles.length} event${jsFiles.length === 1 ? ``: `s`}!`);
+    console.log(`Loaded ${jsFiles.length} event${jsFiles.length === 1 ? null: `s`}!`);
 });
-// Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login(config.token);
+
+/* Client Commands */
+client.commands = new Discord.Collection();
+fs.readdir(`${__dirname}/commands/`, (err, files) => {
+    if(err) console.error(err);
+
+    let jsFiles = files.filter(f => f.split(`.`).pop() == `js`);
+    if(jsFiles.length <= 0) return console.log(`No commands to load!`);
+
+    /* Load Commands */
+    jsFiles.forEach(f => {
+        let props = require(`./commands/${f}`);
+        client.commands.set(props.name, props);
+    });
+    console.log(`Loaded ${jsFiles.length} command${jsFiles.length === 1 ? ``: `s`}!`);
+});
+
+/* Client Checks */
+const refreshActivity = async() => {
+
+	client.user.setPresence({
+        activity: {
+            name: `you`,
+            type: `WATCHING`
+        },
+        status: `online`
+	});
+}
+
+client.on(`message`, async message => {
+    const m = `${message.author} » `;
+    
+    /* Botception & Message Handling */
+    if(message.author.bot || message.channel.type == `dm`) return;
+    if(message.content.slice(0, config.prefix.length).toString().toLowerCase() != config.prefix) return;
+    if(!message.content.toLowerCase().startsWith(config.prefix)) return;
+
+    /* Get Commands & Arguments */
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    /* Validate Commands */
+    let cmd = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command));
+
+    if(!cmd || command === ``) return;
+    else if((cmd.usage) && args.length < (cmd.usage.split(`<`).length) - 1) return message.channel.send(`${message.author} Proper usage is \`${config.prefix + cmd.name} ${cmd.usage}\`.`);
+    else {
+    	if (!cooldowns.has(cmd.name)) cooldowns.set(cmd.name, new Discord.Collection());
+        const now = Date.now();
+        const timestamps = cooldowns.get(cmd.name);
+        let cooldownAmount = cmd.cooldown * 1000;
+        
+        if (timestamps.has(message.author.id)) {
+            let expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+        
+            if (now < expirationTime) {
+                const timeLeft = (expirationTime - now) / 1000;
+                return message.channel.send(`${m} You cannot ${cmd.name} for another \`${timeLeft.toFixed(1)}\` seconds.`);
+          }
+        } 
+          
+          timestamps.set(message.author.id, now);
+          setTimeout(() => timestamps.delete(message.author.id) , cooldownAmount);
+    
+        try {
+            console.log(`${message.author.tag} ran command ${command} in ${message.guild.name} [${message.author.id}].`);
+            cmd.run(client, message, args);
+           } 
+
+        catch(err) { console.log(`There was an error executing command ${command} by ${message.author.tag}.`);
+        message.channel.send(err)}
+    }
+});
+
+
+client.login(config.token).catch(err => console.error(`Failed to authenticate client with application.`));
+client.setMaxListeners(0);
