@@ -4,7 +4,7 @@ const { config } = require(`../index.js`);
 module.exports = {
     name: `avatar`,
     description: `Displays user avatar`,
-    usage: `<mention|id>`,
+    usage: `[mention|id]`,
     cooldown: null,
     aliases: [`avatar`]
 }
