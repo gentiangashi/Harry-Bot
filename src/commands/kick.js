@@ -10,7 +10,7 @@ module.exports = {
 }
 
 module.exports.run = async(client, message, args) => {
-	if (!message.mentions.users.size) {
+	 if (!message.mentions.users.size) {
             return message.reply('You need to tag a user in order to kick them!');
         }
         else {
@@ -21,15 +21,15 @@ module.exports.run = async(client, message, args) => {
             if (!taggedUser) {
                 message.channel.send('Can\'t find user!');
             }
-
+            if (!taggedUser === message.author) {
+                message.channel.send('Can\'t Kick Yourself');
+            }
             let reason = args.join(' ').slice(22);
             if(!reason) return message.channel.send("No reason specified");
             if (!message.member.hasPermission('MANAGE_MESSAGES')) {
                 return message.channel.send('Sorry You Dont Have Permission To Kick');
             }
-            /*if (taggedUser.hasPermission('MANAGE_MESSAGES')) {
-                return message.channel.send('The person can\'t be kicked!');
-            }*/
+ 
 
             let kickEmbed = new Discord.MessageEmbed()
                 .setTitle('**Kick**')
@@ -44,11 +44,20 @@ module.exports.run = async(client, message, args) => {
             let kickChannel = message.guild.channels.cache.find(c => c.name === 'mod-log');
 
             if (!kickChannel) {
-                return message.channel.send('Can\'t find incidents channel');
+                return message.channel.send('Can\'t find mod-log channel');
             }
+
+            let userEmbed = new Discord.MessageEmbed()
+            .setTitle(`Kicked From ${message.guild.name}`)
+            .addField('Kicked By', `<@${message.author.id}> with ID: ${message.author.id}`)
+            .addField('Kicked From', `${message.channel}`)
+            .addField('Reason', `${reason}`)
+            .setTimestamp(new Date())
+
+            taggedUser.send(userEmbed);
 
             message.guild.member(taggedUser).kick(reason);
             kickChannel.send(kickEmbed);
         }
-      message.delete();     
+      message.delete();
 }
