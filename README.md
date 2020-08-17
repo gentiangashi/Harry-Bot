@@ -3,7 +3,7 @@
 # Harry Bot
 [![GitHub license](https://img.shields.io/github/license/GentianGashi/Harry-Bot)](https://github.com/GentianGashi/Harry-Bot/blob/master/LICENSE) 
 [![Donate on PayPal](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/UnboundPhantom)
-[![Discord](https://img.shields.io/badge/Invite-Bot-9cf)](https://discord.com/api/oauth2/authorize?client_id=743121578388226169&permissions=271969360&scope=bot)
+[![Discord](https://img.shields.io/badge/Invite-Bot-9cf)](https://discord.com/api/oauth2/authorize?client_id=743121578388226169&permissions=8&scope=bot)
 
 Harry Bot is a general-purpose discord bot coded in JavaScript with [Node.js](https://nodejs.org) using modules such as [Discord.js](https://discord.js.org/) to provide a feature-rich user experience.
 ## Table of Contents
@@ -28,6 +28,10 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 	* **!h dankmeme** - Uploads random meme from /r/dankmemes
 	* **!h avatar @User** - Displays user avatar
 
+- *Moderation:*
+	* `'mod-log' text channel required`
+	* **!h kick** - Kick Mentioned User
+	* **!h ban** - Ban Mentioned User (In Progress)
 - *Info:*
 	* **!h ping** - Displays bot latency
 	* **!h server** - Displays server name + total members
