@@ -25,8 +25,7 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 	* **!h help** - Displays commands
 
 - *Fun:*
-	* **!h goodmeme** - Uploads a random meme
-	* **!h badmeme** - Uploads random meme from /r/dankmemes
+	* **!h dankmeme** - Uploads random meme from /r/dankmemes
 	* **!h avatar @user** - Displays user avatar
 
 - *Info:*
