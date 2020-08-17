@@ -1,11 +1,10 @@
 {
-  "name": "HarryBot",
+  "name": "harry-bot",
   "version": "0.0.1",
   "description": "General-Purpose Discord Bot",
   "main": "runtime.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "express --view=pug _site",
     "start": "node runtime.js"
   },
   "engines": {
@@ -13,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GentianGashi/Harry-Bot"
+    "url": "git+https://github.com/GentianGashi/Harry-Bot.git"
   },
   "keywords": [
     "discord-bot"
