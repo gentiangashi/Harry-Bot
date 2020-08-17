@@ -4,7 +4,7 @@ const { config } = require(`../index.js`);
 module.exports = {
     name: `ban`,
     description: `Ban Mentioned User`,
-    usage: '<mentionnd|id> <Reason>',
+    usage: '<mention|id> <Reason>',
     cooldown: null,
     aliases: null
 }
