@@ -59,8 +59,8 @@ const refreshActivity = async() => {
 
 	client.user.setPresence({
         activity: {
-            name: `you`,
-            type: `WATCHING`
+            name: `!h help`,
+            type: `PLAYING`
         },
         status: `online`
 	});
