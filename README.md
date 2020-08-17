@@ -26,7 +26,7 @@ Discord.js is a powerful [Node.js](https://nodejs.org) module that allows you to
 
 - *Fun:*
 	* **!h dankmeme** - Uploads random meme from /r/dankmemes
-	* **!h avatar @user** - Displays user avatar
+	* **!h avatar @User** - Displays user avatar
 
 - *Info:*
 	* **!h ping** - Displays bot latency
@@ -51,7 +51,6 @@ Make sure you have [Node.js installed](https://nodejs.org/en/download/), and run
 ## Author
 * **Gentian Gashi** - [GentianGashi](https://github.com/GentianGashi)
 * **Jeff Pete** - [jeffpete](https://github.com/jeffpete)
-* **Discord API** - [Discord](https://github.com/discord)
 
 ## License
 tldr:
