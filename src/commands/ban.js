@@ -27,7 +27,7 @@ module.exports.run = async(client, message, args) => {
                 return message.channel.send('Sorry You Dont Have Permission To Kick');
             }
             let inline = true;
-            let embed = new discord.MessageEmbed()
+            let embed = new Discord.MessageEmbed()
             .setTitle(`**Banned**`)
             .setColor('RED')
             .setDescription(`**You Were Banned From ${server.name}**`)
@@ -37,7 +37,7 @@ module.exports.run = async(client, message, args) => {
             toBan.send(embed);
             let modlog = message.guild.channels.cache.find(ch => ch.name === 'mod-log');
     
-            let banEmbed = new discord.MessageEmbed()
+            let banEmbed = new Discord.MessageEmbed()
             .setTitle('**Ban**')
             .setColor('RED')
             .addField('Kicked User', `${toBan} with ID: ${toBan.id}`)
