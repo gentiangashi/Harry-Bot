@@ -4,7 +4,7 @@ const { config } = require(`../index.js`);
 module.exports = {
 	name: `help`,
 	description: `View info about commands.`,
-	usage: `[command name]`,
+	usage: `<command name>`,
 	cooldown: null,
     aliases: [`commands`, `?`, `h`]
 }
