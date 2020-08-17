@@ -1,5 +1,5 @@
 {
-  "name": "Harry Bot",
+  "name": "HarryBot",
   "version": "0.0.1",
   "description": "General-Purpose Discord Bot",
   "main": "runtime.js",
