@@ -23,7 +23,7 @@ module.exports.run = async(client, message, args) => {
         .setColor(0x0099ff)
         .setTitle(image.title)
         .setImage(image.url)
-	.setFooter("Image from r/dogpictures")
+	.setFooter("Image from r/dankmemes")
         message.channel.send(dankEmbed);
     });
 }
