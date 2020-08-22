@@ -16,7 +16,7 @@ module.exports.run = async(client, message, args) => {
     .then(response => response.json())
     .then(response => {
 
-	let image = response.data.children[Math.floor(Math.random() * (response.data.children).length].data;
+	let image = response.data.children[Math.floor(Math.random() * response.data.children.length)].data;
          
         const dankEmbed = new Discord.MessageEmbed()
         .setColor(0x0099ff)
