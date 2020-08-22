@@ -1,6 +1,5 @@
 const Discord = require(`discord.js`);
 const { config } = require(`../index.js`);
-const { rng } = require(`../config/functions`);
 const fetch = require(`node-fetch`);
 
 module.exports = {
