@@ -4,7 +4,7 @@ const fetch = require(`node-fetch`);
 
 module.exports = {
     name: `dankmeme`,
-    description: `View a random meme from r/dankmemes.`,
+    description: `Uploads random meme from r/dankmemes`,
     usage: null,
     cooldown: 1,
     aliases: [`meme`]
