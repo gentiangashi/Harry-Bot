@@ -12,11 +12,11 @@ module.exports = {
 
 module.exports.run = async(client, message, args) => {
 
-	fetch(`https://api.reddit.com/r/dankmemes/top.json?sort=top&t=day&limit=800`)
+    fetch(`https://api.reddit.com/r/dankmemes/top.json?sort=top&t=day&limit=800`)
     .then(response => response.json())
     .then(response => {
 
-         let image = response.data.children[rng(0, Object.keys(response).length)].data;
+         let image = response.data.children[Math.floor(Math.random() * Object.keys(response).length)].data;
          
         const dankEmbed = new Discord.MessageEmbed()
         .setColor(0x0099ff)
