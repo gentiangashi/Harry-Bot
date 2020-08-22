@@ -4,7 +4,7 @@ const fetch = require(`node-fetch`);
 
 module.exports = {
     name: `dankmeme`,
-    description: `View a random meme from /r/dankmemes.`,
+    description: `View a random meme from r/dankmemes.`,
     usage: null,
     cooldown: 1,
     aliases: [`meme`]
@@ -23,6 +23,5 @@ module.exports.run = async(client, message, args) => {
         .setImage(image.url)
 	.setFooter("Image from r/dankmemes")
         message.channel.send(dankEmbed);
-        console.log(image);
     });
 }
