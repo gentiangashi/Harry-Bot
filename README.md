@@ -2,7 +2,7 @@
 
 # Harry Bot
 [![GitHub license](https://img.shields.io/github/license/GentianGashi/Harry-Bot)](https://github.com/GentianGashi/Harry-Bot/blob/master/LICENSE) 
-[![Discord](https://img.shields.io/discord/747360554439540798.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/vpEv3HJ)
+[![Discord](https://img.shields.io/discord/747360554439540798.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/ggdGY3y)
 [![Discord](https://img.shields.io/badge/Invite-Bot-9cf)](https://discord.com/api/oauth2/authorize?client_id=743121578388226169&permissions=8&scope=bot)
 
 Harry Bot is a general-purpose discord bot coded in JavaScript with [Node.js](https://nodejs.org) using modules such as [Discord.js](https://discord.js.org/) to provide a feature-rich user experience.
