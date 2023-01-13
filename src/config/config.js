@@ -7,7 +7,7 @@ var config = {
         blue: 0x0099ff,
         red: 0xff0000
     },
-    developer: `Unbound`,
+    developer: `Gentian`,
     developerTag: `9777`,
     developerIDs: [`187706072822317056`],
     hostname: `gateway.discord.gg`,
