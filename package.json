@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/GentianGashi/Harry-Bot#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^1.2.2",
     "cookie-parser": "^1.4.4",
     "core-js": "^3.6.4",
     "dblapi.js": "^2.4.0",
@@ -35,12 +35,12 @@
     "ffmpeg": "0.0.4",
     "fs": "^0.0.2",
     "http-errors": "^1.7.3",
-    "json": "^9.0.6",
+    "json": "^11.0.0",
     "math.js": "^1.1.46",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
     "node-opus": "^0.3.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.2",
     "request": "^2.88.2",
     "util": "^0.12.1",
     "ytdl-core": "^2.0.0"
