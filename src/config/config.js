@@ -8,7 +8,7 @@ var config = {
         red: 0xff0000
     },
     developer: `Unbound`,
-    developerTag: `5588`,
+    developerTag: `9777`,
     developerIDs: [`187706072822317056`],
     hostname: `gateway.discord.gg`,
     prefix: `!h `,
